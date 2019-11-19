@@ -29,7 +29,6 @@
   width: 600px;	
   position: sticky;
   float:right;
-
 }
 
 nav{
@@ -49,8 +48,13 @@ nav{
   width: auto;
 }
 .header{
-  padding: 2%;
+  padding: 1%;
   background-color: lawngreen;
   position: sticky;
   top: 0;
+}
+
+/* Cover */
+.Covers{
+  width: 51%;
 }

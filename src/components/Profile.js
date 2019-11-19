@@ -1,35 +1,32 @@
 import React, { Component } from 'react'
-import {  Form, Input} from 'semantic-ui-react'
-import '../App.css'
-
-export default class Profile extends Component {
-    constructor(props){
-        super(props)
-            this.state={
-                Input:''
-            }
-        
-    }
-    state= {Input:''}
+import { Header, Container, Image ,Form, Input} from 'semantic-ui-react'
+import '../App.css';
 
 
-    render() {
-        // const { value } = this.state
+
+class Profile extends Component {
+
+  render() {
+
     return (
-      <Form>
-          <Form.Field label="What's My Dish?"/>
-        <Form.Group widths='equal'>
-
-          <Form.Input fluid placeholder='Dish Name' />
-          <Input type='file' fluid id='ImageUpload'/>
-          <Form.Input fluid placeholder='Description'/>
-        </Form.Group>
-        <Form.Group inline>
-
-        </Form.Group>
-        <Form.TextArea label='About' placeholder='Tell us more about you...' />
-        <Form.Button>Submit</Form.Button>
-      </Form>
-    )
-    }
+      <div className="Cover">
+        <Header as='h2' icon textAlign='left' style={{ height: 200 }}>
+          <Image circular src={require('../photos/logo.png')} />
+        </Header>
+        <Container style={{ height: 200 , width:1600}}>
+          <Form>
+            
+            <Form.Group widths='equal'>
+              <Form.Field label="What's my Dish?" style={{  width:400 }}/>
+              <Form.Input fluid placeholder='Name of your Dishes..' />
+              <Input type='file' fluid/>
+              <Form.Input fluid placeholder='Description' />
+            </Form.Group>
+          </Form>
+        </Container>
+      </div>
+    );
+  }
 }
+
+export default Profile
