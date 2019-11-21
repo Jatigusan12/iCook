@@ -5,7 +5,7 @@ export default class PostHeader extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div>
               <Router>
                 <div className="header">
                   <nav>
