@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Header, Container, Image, Form, Input, Label } from 'semantic-ui-react'
+import { Header, Container, Image, Form, Input } from 'semantic-ui-react'
+// import PostHeader from './PostHeader'
 import '../App.css';
 
 
@@ -8,7 +9,7 @@ class Profile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ListDishName: [],
+      DishName: "",
       ListDescription: [],
       ListIngredient: [],
       ListProcedure: []
@@ -36,7 +37,7 @@ class Profile extends Component {
           <Container style={{ height: 200, width: 1500 }}>
             <Form>
               <Form.Group>
-                <Form.Field label="What's my Dish?"
+                <Form.Field label="What's my Dish?" 
                   style={{
                     width: 250,
                     fontSize: 30,
@@ -44,6 +45,9 @@ class Profile extends Component {
                     marginRight: 50,
                     marginLeft: 10
                   }}
+                  value= {this.state.DishName}
+                  OnSubmit
+                  
                 />
                 <Form.Input fluid placeholder='Name of your Dishes..'
                   style={{
@@ -51,6 +55,7 @@ class Profile extends Component {
                     fontSize: 20,
                     marginTop: 5,
                   }}
+                  required
                 />
                 <Form.TextArea fluid placeholder='Description'
                   style={{
@@ -58,8 +63,8 @@ class Profile extends Component {
                     height: 100,
                     fontSize: 20,
                     marginTop: 5
-
                   }}
+                  required
                 />
               </Form.Group>
               <Form.Group
@@ -74,6 +79,7 @@ class Profile extends Component {
                     marginLeft: 10,
                     marginTop: -50
                   }}
+                  required
                 />
                 <Form.TextArea fluid placeholder='Ingredient'
                   style={{
@@ -82,7 +88,9 @@ class Profile extends Component {
                     marginLeft: 20,
                     fontSize: 20,
                     marginTop: -50
-                  }} />
+                  }}
+                  required
+                   />
                 <Form.TextArea fluid placeholder='Procedure'
                   style={{
                     width: 350,
@@ -91,6 +99,7 @@ class Profile extends Component {
                     fontSize: 20,
                     marginTop: -50
                   }}
+                  required
                 />
                 <Form.Button
                   style={{
@@ -109,12 +118,11 @@ class Profile extends Component {
           </Container>
         </div>
         <div>
-          <Container style={{ height: 200 }}>
+          <Container style={{ height: 200, marginLeft:50 }}>
             <label className="Dishes">
               My Dishes
             </label>
           </Container>
-
         </div>
       </div>
     );

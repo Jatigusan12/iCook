@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import { Header,Icon } from 'semantic-ui-react'
+import { Icon } from 'semantic-ui-react'
 
 export default class PostHeader extends Component {
 
     render() {
         return (
             <div>
-              <Router>
                 <div className="header">
                   <nav>
                     {/* adding the image logo */}
@@ -15,7 +14,6 @@ export default class PostHeader extends Component {
                   </nav>
 
                 </div>
-              </Router>
             </div>
           )
     }
